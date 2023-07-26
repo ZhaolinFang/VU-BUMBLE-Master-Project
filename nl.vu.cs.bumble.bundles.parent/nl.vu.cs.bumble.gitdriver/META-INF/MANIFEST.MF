@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Gitdriver
+Bundle-SymbolicName: nl.vu.cs.bumble.gitdriver
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: nl.vu.cs.bumble.gitdriver
+Bundle-ClassPath: lib/,
+ .
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: org.apache.commons.io
+Export-Package: nl.vu.cs.bumble.gitdriver

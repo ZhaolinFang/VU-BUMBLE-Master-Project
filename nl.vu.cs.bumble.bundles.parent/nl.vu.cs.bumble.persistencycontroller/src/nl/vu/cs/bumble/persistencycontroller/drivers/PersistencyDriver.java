@@ -12,7 +12,7 @@ public abstract class PersistencyDriver {
 		this.modelName = modelName;
 	}
 	
-	public abstract boolean save();
+	public abstract boolean save() throws Exception;
 	
 	public boolean saveAll() {
 		System.out.println("All models are saved!");

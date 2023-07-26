@@ -1,5 +1,8 @@
 package nl.vu.cs.bumble.persistencycontroller.drivers;
 
+import nl.vu.cs.bumble.gitdriver.*;
+
+
 public class GitPersistencyDriver extends PersistencyDriver {
 	
 	public GitPersistencyDriver(String url, String modelName) {
@@ -7,13 +10,15 @@ public class GitPersistencyDriver extends PersistencyDriver {
 	}
 
 	public boolean fetch() {
+		boolean isSuccess = GitDriver.fetch(modelName);
 		System.out.println("The model " + modelName + " at " + url + " is fetched!");
-		return true;
+		return isSuccess;
 	}
 	
-	public boolean save() {
+	public boolean save() throws Exception {
+		boolean isSuccess = GitDriver.save(modelName, url);
 		System.out.println("The model " + modelName + " at " + url + " is saved!");
-		return true;
+		return isSuccess;
 	}
 
 }

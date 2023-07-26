@@ -24,11 +24,12 @@ public class PersistencyController{
 	
 	public void setType(String url) {
 		this.url = url;
-		if(url.contains("Git"))
+		String temp = url.toLowerCase();
+		if(temp.contains("git"))
 		{
 			this.type = DriverType.Git;
 		}
-		else if(url.contains("MongoDB"))
+		else if(temp.contains("mongo"))
 		{
 			this.type = DriverType.MongoDB;
 		}
@@ -58,7 +59,7 @@ public class PersistencyController{
 		return driver.fetchAll();
 	}
 	
-	public boolean save() {
+	public boolean save() throws Exception {
 		return driver.save();
 	}
 	

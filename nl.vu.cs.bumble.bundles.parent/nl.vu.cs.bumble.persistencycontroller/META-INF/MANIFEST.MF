@@ -6,3 +6,4 @@ Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: nl.vu.cs.bumble.persistancecontroller
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: nl.vu.cs.bumble.persistencycontroller.controller
+Require-Bundle: nl.vu.cs.bumble.gitdriver;bundle-version="1.0.0"
